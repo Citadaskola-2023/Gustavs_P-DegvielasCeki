@@ -1,7 +1,14 @@
 <?php
 
-require '../html/header.html'; //Header priekš Receipt un Data
+//load header
+require '../html/header.html';
 
-require '../html/receiptData.html'; // Ieliek html failu
+require __DIR__ . '/../src/FuelReceiptRequest.php';
 
-
+//get search
+require '../html/receiptData.html';
+$request = new \App\fuelReceiptRequest();
+$request->requestData();
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $request->getSearchInputs();
+}

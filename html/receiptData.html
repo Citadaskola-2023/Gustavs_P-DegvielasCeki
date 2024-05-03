@@ -1,2 +1,131 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Receipt Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
 
+        form {
+            max-width: 10000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th {
+            text-align: left;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        input[type="number"],
+        input[type="text"],
+        input[type="date"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: seagreen;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: mediumseagreen;
+        }
+
+        th a {
+            color: dimgray;
+            text-decoration: none;
+        }
+
+        th a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+<form method="POST">
+    <table>
+        <tbody>
+        <tr>
+            <th>
+                <a href="data?SELECT%20*%20FROM%20Form%20ORDER%20BY%20id%20DESC">ID</a><br>
+                <input type="number" id="idInputMin" name="idInputMin"><br>
+                <input type="number" id="idInputMax" name="idInputMax">
+            </th>
+            <th>
+                <a href="data?SELECT%20*%20FROM%20Form%20ORDER%20BY%20licence_plate%20DESC">Licence Plate</a><br>
+                <input type="text" id="licencePlateInput" name="licencePlateInput">
+            </th>
+            <th>
+                <a href="data?SELECT%20*%20FROM%20Form%20ORDER%20BY%20date_time%20DESC">Date and Time</a><br>
+                <input type="date" id="dateTimeInputMin" name="dateTimeInputMin"><br>
+                <input type="date" id="dateTimeInputMax" name="dateTimeInputMax">
+            </th>
+            <th>
+                <a href="data?SELECT%20*%20FROM%20Form%20ORDER%20BY%20petrol_station%20DESC">Petrol Station</a><br>
+                <input type="text" id="petrolStationInput" name="petrolStationInput">
+            </th>
+            <th>
+                <a href="data?SELECT%20*%20FROM%20Form%20ORDER%20BY%20fuel_type%20DESC">Fuel Type</a><br>
+                <input type="text" id="fuelTypeInput" name="fuelTypeInput">
+            </th>
+            <th>
+                <a href="data?SELECT%20*%20FROM%20Form%20ORDER%20BY%20refueled%20DESC">Refueled</a><br>
+                <input type="number" id="refueledInputMin" name="refueledInputMin"><br>
+                <input type="number" id="refueledInputMax" name="refueledInputMax">
+            </th>
+            <th>
+                <a href="data?SELECT%20*%20FROM%20Form%20ORDER%20BY%20total%20DESC">Total</a><br>
+                <input type="number" id="totalInputMin" name="totalInputMin"><br>
+                <input type="number" id="totalInputMax" name="totalInputMax">
+            </th>
+            <th>
+                <a href="data?SELECT%20*%20FROM%20Form%20ORDER%20BY%20currency%20DESC">Currency</a><br>
+                <input type="text" id="currencyInput" name="currencyInput">
+            </th>
+            <th>
+                <a href="data?SELECT%20*%20FROM%20Form%20ORDER%20BY%20fuel_price%20DESC">Fuel Price</a><br>
+                <input type="number" id="fuelPriceInputMin" name="fuelPriceInputMin"><br>
+                <input type="number" id="fuelPriceInputMax" name="fuelPriceInputMax">
+            </th>
+            <th>
+                <a href="data?SELECT%20*%20FROM%20Form%20ORDER%20BY%20odometer%20DESC">Odometer</a><br>
+                <input type="number" id="odometerInputMin" name="odometerInputMin"><br>
+                <input type="number" id="odometerInputMax" name="odometerInputMax">
+            </th>
+        </tr>
+        </tbody>
+    </table>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

@@ -3,7 +3,7 @@
 namespace App;
 use PDO;
 use PDOException;
-class DB
+class database
 {
     public function connectDB() : PDO{
         try{ //mēģina ielogoties iekšā

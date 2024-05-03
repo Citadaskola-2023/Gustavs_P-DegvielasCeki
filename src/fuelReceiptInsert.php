@@ -27,7 +27,7 @@ class fuelReceiptInsert
 
     public function uploadFuelReceipt(array $data): void
     {
-        $DB = new DB();
+        $DB = new database();
         $conn = $DB->connectDB();
         $stmt = $conn->prepare(
             "INSERT INTO Form(licence_plate, date_time,

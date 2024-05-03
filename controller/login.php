@@ -2,7 +2,7 @@
 require __DIR__ . '/../src/database.php';
 //Login forma, lai varetu ielogoties
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $db = new \App\DB();
+    $db = new \App\database();
     $db->login($_POST['username'], $_POST['password']);
 }
 
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         input[type="submit"] {
             width: 100%;
             padding: 10px;
-            background-color: #4CAF50;
+            background-color: seagreen;
             color: white;
             border: none;
             border-radius: 5px;
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: mediumseagreen;
         }
     </style>
 </head>
