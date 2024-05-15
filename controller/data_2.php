@@ -95,6 +95,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     MySQL;
     $params['odometer_max'] = $filters['odometerInputMax'];
     }
+    if (isset($filters['totalInputMin'])) {
+        $sql[] = <<<MySQL
+            AND total >= :total_min
+    MySQL;
+        $params['total_min'] = $filters['totalInputMin'];
+    }
+    if (isset($filters['totalInputMax'])) {
+        $sql[] = <<<MySQL
+            AND total <= :total_max
+    MySQL;
+        $params['total_max'] = $filters['totalInputMax'];
+    }
 
 
     $query = implode("\n", $sql);
@@ -151,8 +163,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<td>" . $row['date_time'] . "</td>";
         echo "<td>" . $row['petrol_station'] . "</td>";
         echo "<td>" . $row['fuel_type'] . "</td>";
-        echo "<td>" . $row['refueled'] . "</td>";
         echo "<td>" . $row['currency'] . "</td>";
+        echo "<td>" . $row['refueled'] . "</td>";
         echo "<td>" . $row['fuel_price'] . "</td>";
         echo "<td>" . $row['odometer'] . "</td>";
         echo "<td class='total-column'>" . $row['total'] . "</td>";

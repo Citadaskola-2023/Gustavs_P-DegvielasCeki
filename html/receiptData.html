@@ -78,8 +78,8 @@
         <tr>
             <th>
                 ID<br>
-                <input type="number" id="idInputMin" name="idInputMin"><br>
-                <input type="number" id="idInputMax" name="idInputMax">
+                <input type="number" step="0.01" id="idInputMin" name="idInputMin"><br>
+                <input type="number" step="0.01" id="idInputMax" name="idInputMax">
             </th>
             <th>
                 Licence Plate<br>
@@ -100,13 +100,8 @@
             </th>
             <th>
                 Refueled<br>
-                <input type="number" id="refueledInputMin" name="refueledInputMin"><br>
-                <input type="number" id="refueledInputMax" name="refueledInputMax">
-            </th>
-            <th>
-                Total<br>
-                <input type="number" id="totalInputMin" name="totalInputMin"><br>
-                <input type="number" id="totalInputMax" name="totalInputMax">
+                <input type="number" step="0.01" id="refueledInputMin" name="refueledInputMin"><br>
+                <input type="number" step="0.01" id="refueledInputMax" name="refueledInputMax">
             </th>
             <th>
                 Currency<br>
@@ -114,13 +109,18 @@
             </th>
             <th>
                 Fuel Price<br>
-                <input type="number" id="fuelPriceInputMin" name="fuelPriceInputMin"><br>
-                <input type="number" id="fuelPriceInputMax" name="fuelPriceInputMax">
+                <input type="number" step="0.01" id="fuelPriceInputMin" name="fuelPriceInputMin"><br>
+                <input type="number" step="0.01" id="fuelPriceInputMax" name="fuelPriceInputMax">
             </th>
             <th>
                 Odometer<br>
                 <input type="number" id="odometerInputMin" name="odometerInputMin"><br>
                 <input type="number" id="odometerInputMax" name="odometerInputMax">
+            </th>
+            <th>
+                Total<br>
+                <input type="number" step="0.01" id="totalInputMin" name="totalInputMin"><br>
+                <input type="number" step="0.01" id="totalInputMax" name="totalInputMax">
             </th>
         </tr>
         </tbody>
