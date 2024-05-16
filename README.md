@@ -1,6 +1,6 @@
-##**Fuel receipt data storage**
+## **Fuel receipt data storage**
 
-###**Description**
+### **Description**
 
 Data storage of fuel receipts for easy overview.
 
@@ -10,7 +10,7 @@ Data storage of fuel receipts for easy overview.
  - [Docker](https://www.docker.com/get-started/)
 
 
-###**Getting started**
+### **Getting started**
 
 
   - Clone `git@github.com:Citadaskola-2023/Gustavs_P-DegvielasCeki.git` repository to your local machine using Git (read-only).
