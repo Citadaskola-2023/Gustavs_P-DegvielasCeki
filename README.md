@@ -21,3 +21,6 @@ Data storage of fuel receipts for easy overview.
   - Start the PHP and mysql containers.
     `docker compose up -d`
 
+### **License**
+
+This project is licensed under the Unlicense - see the [LICENSE](https://github.com/Citadaskola-2023/Gustavs_P-DegvielasCeki/blob/main/LICENSE) file for details.
