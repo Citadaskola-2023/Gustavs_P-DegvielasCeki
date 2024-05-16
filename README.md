@@ -4,7 +4,7 @@
 
 Data storage of fuel receipts for easy overview.
 
-###**Requirements**
+### **Requirements**
 
  - [Git](https://git-scm.com/)
  - [Docker](https://www.docker.com/get-started/)
