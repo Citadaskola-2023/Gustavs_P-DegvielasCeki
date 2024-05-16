@@ -3,6 +3,8 @@
 
 namespace App;
 
+use DateTime, DateTimeZone;
+
 require __DIR__ . '/../src/database.php';
 
 class fuelReceiptInsert
@@ -10,7 +12,7 @@ class fuelReceiptInsert
     public function getFormInput(): array
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            return [
+            $data = [
                 'licence_plate' => $_POST['license_plate'],
                 'date_time' => $_POST['date_time'],
                 'petrol_station' => $_POST['petrol_station'],
@@ -21,6 +23,22 @@ class fuelReceiptInsert
                 'odometer' => $_POST['odometer'],
                 'total' => $_POST['fuel_price'] * $_POST['refueled'],
             ];
+            if (! is_string($data['licence_plate'])) {
+                die('Does not match input type!');
+            }
+            if (! is_string($data['petrol_station'])) {
+                die('Does not match input type!');
+            }
+            if (! preg_match("/^[0-9]+$/",$data['odometer'])) {
+                die('Does not match input type!');
+            }
+
+            $DateTime_local = new DateTime($data['date_time'], new DateTimeZone(date_default_timezone_get()));
+            $DateTime_local->setTimezone(new DateTimeZone('UTC'));
+            $DateTime_universal = $DateTime_local->format('Y-m-d\TH:i');
+            $data['date_time'] = $DateTime_universal;;
+
+            return $data;
         }
         die("<h3> Could not get form input data </h3>");
     }
