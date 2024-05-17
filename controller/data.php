@@ -172,8 +172,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<td>" . $row['date_time'] . "</td>";
         echo "<td>" . $row['petrol_station'] . "</td>";
         echo "<td>" . $row['fuel_type'] . "</td>";
-        echo "<td>" . $row['currency'] . "</td>";
         echo "<td>" . $row['refueled'] . "</td>";
+        echo "<td>" . $row['currency'] . "</td>";
         echo "<td>" . $row['fuel_price'] . "</td>";
         echo "<td>" . $row['odometer'] . "</td>";
         echo "<td class='total-column'>" . $row['total'] . "</td>";

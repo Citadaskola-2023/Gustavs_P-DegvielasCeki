@@ -24,13 +24,13 @@ class fuelReceiptInsert
                 'total' => $_POST['fuel_price'] * $_POST['refueled'],
             ];
             if (! is_string($data['licence_plate'])) {
-                die('Does not match input type!');
+                die('Lincence plate does not match input type!');
             }
             if (! is_string($data['petrol_station'])) {
-                die('Does not match input type!');
+                die('Petrol station does not match input type!');
             }
             if (! preg_match("/^[0-9]+$/",$data['odometer'])) {
-                die('Does not match input type!');
+                die('Odometer does not match input type!');
             }
 
             $DateTime_local = new DateTime($data['date_time'], new DateTimeZone(date_default_timezone_get()));
